@@ -1,0 +1,356 @@
+.wrapper {
+  padding: 24px 8px;
+}
+
+.card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+}
+
+.avatarSection {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.avatarCircle {
+  width: 76px;
+  height: 76px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #ffffff 0%, #e5ecff 45%, #dbeafe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+  
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 22px;
+  margin: 0;
+}
+
+.username {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.bio {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.statBox {
+  background-color: #f9fafb;
+  border-radius: 14px;
+  padding: 8px 10px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.statBox:hover {
+  background-color: #eef2ff;
+  transform: translateY(-1px);
+}
+
+.statLabel {
+  display: block;
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.statValue {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.item {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background-color: #f9fafb;
+}
+
+.itemFull {
+  grid-column: 1 / -1;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background-color: #f9fafb;
+}
+
+.label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9ca3af;
+}
+
+.value {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.form {
+  margin-top: 16px;
+}
+
+.input,
+.textarea,
+.form select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus,
+.form select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.25);
+}
+
+/* Avatar URL + File upload controls */
+.avatarInputRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.fileButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.fileButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+  filter: brightness(1.03);
+}
+
+.hiddenFileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fileNameText {
+  font-size: 12px;
+  color: #4b5563;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatarActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.applyButton {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clearButton {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.actionsRow {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.saveButton {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.saveButton:hover:enabled {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.6);
+  filter: brightness(1.05);
+}
+
+.saveButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.deleteButton {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #fecaca;
+  background: linear-gradient(135deg, #ffe4e6, #fee2e2);
+  color: #b91c1c;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 0 0 8px;
+  box-shadow: 0 12px 26px rgba(244, 63, 94, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.deleteButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(244, 63, 94, 0.28);
+  filter: brightness(1.02);
+}
+
+@media (max-width: 520px) {
+  .actionsRow {
+    justify-content: center;
+    gap: 10px;
+  }
+  .saveButton, .deleteButton {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.error {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.success {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background-color: #dcfce7;
+  color: #166534;
+  font-size: 13px;
+}
+
+.tabPanel {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background-color: #f3f4f6;
+}
+
+.tabLoading {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.listPrimary {
+  display: block;
+  font-size: 14px;
+}
+
+.listSecondary {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.empty {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.removeButton {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #fecaca;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 12px;
+  cursor: pointer;
+}

@@ -1,0 +1,117 @@
+.sidebar {
+  width: 260px;
+  height: calc(100vh - 60px);
+  background-color: #ffffff;
+  padding: 18px 16px 26px 18px;
+  position: sticky;
+  top: 60px;
+  overflow-y: auto;
+  box-shadow: 6px 0 24px rgba(15, 23, 42, 0.08);
+  border-right: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.sidebar h2 {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul:last-child {
+  margin-bottom: 30px;
+}
+
+.sidebar ul li {
+  padding: 8px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease,
+    box-shadow 0.18s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #eef2ff;
+  color: var(--color-primary);
+  transform: translateX(3px);
+  box-shadow: 0 10px 20px rgba(148, 163, 255, 0.45);
+}
+
+.sidebar ul li a i {
+  font-size: 18px;
+  color: var(--color-primary);
+  transition: color 0.18s ease;
+}
+
+.sidebar ul li a:hover i {
+  color: var(--color-primary);
+}
+
+.activeLink {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
+  color: #ffffff !important;
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.55);
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 70%;
+    height: 100vh;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    border-right: none;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+    margin-bottom: 12px;
+  }
+
+  .sidebar h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar ul li { padding: 4px 0; }
+
+  .sidebar ul li a {
+    gap: 10px;
+    padding: 10px 12px; /* larger touch target */
+    font-size: 13px;
+  }
+
+  .sidebar ul li a i { font-size: 16px; }
+}
