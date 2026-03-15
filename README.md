@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hey Stranger - MERN Dashboard
 
 This project is a MERN-stack version of the existing "Hey Stranger" social media dashboard UI.
@@ -161,3 +162,7 @@ The dashboard page (`Dashboard.jsx`) does the following:
 - You can adjust the CSS Modules in `client/src/components/*.module.css` to tweak spacing, colors, or responsiveness while keeping the overall visual design.
 - To add a real post preview modal, replace the `alert` in `Dashboard.jsx` with a modal component.
 - To build a full auth flow, create login/register pages that use `auth.js` and store the JWT, then inject the token into the Axios instance (e.g. via an interceptor).
+=======
+# hey-stranger-mern
+Hey Stranger - Community Social Networking Platform built using MERN stack (MongoDB, Express, React, Node.js)
+>>>>>>> 0f546ed60215a6d513db9e796fb98e3abab0bea0
